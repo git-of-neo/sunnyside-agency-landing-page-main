@@ -51,6 +51,30 @@ h3{
     color: var(--clr-neutral-bold);
 }
 
+.grid-1 {
+    grid-area: one;
+}
+
+.grid-2 {
+    grid-area: two;
+}
+
+.grid-3 {
+    grid-area: three;
+}
+
+.grid-4 {
+    grid-area: four;
+}
+
+.grid-5 {
+    grid-area: five;
+}
+
+.grid-6 {
+    grid-area: six;
+}
+
 .full-size-image {
     width: 100%;
     min-height: 100%;
@@ -108,12 +132,13 @@ nav > a{
     text-transform: uppercase;
     letter-spacing: .5ch;
     text-align: center;
+    width: 100%;
 }
 
 .header__content {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: max(3rem);
 }
 
 .header__content > * {
@@ -122,7 +147,11 @@ nav > a{
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-areas: 
+        'one two'
+        'three four'
+        'five six';
 }
 
 .information-card {
@@ -276,9 +305,61 @@ nav > a{
 }
 
 /* interactivity and reactivity */
-/* @media screen {
-    
-} */
+@media (max-width: 850px) {
+    .grid {
+        grid-template-areas: 
+        'two'
+        'one'
+        'three'
+        'four'
+        'five'
+        'six';
+    }
+
+    .header__content h1 {
+        font-size: 2rem;
+    }
+
+    img#transform {
+        content: url("images/mobile/image-transform.jpg");
+    }
+
+    img#stand-out {
+        content: url("images/mobile/image-stand-out.jpg");
+    }
+
+    .information-card__content {
+        text-align: center;
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .grid-5 {
+        background-image: url("images/mobile/image-graphic-design.jpg");
+    }
+
+    .grid-6 {
+        background-image: url("images/mobile/image-photography.jpg");
+    }
+
+    .service-card__content {
+        margin-top: 100%;
+        width: 100%;
+        padding: 3rem;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .testimonial {
+        margin: 2rem;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 .tail__links>p:hover{
     cursor: pointer;
