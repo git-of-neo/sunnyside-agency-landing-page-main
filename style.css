@@ -177,6 +177,35 @@ nav > a{
 .learn-more {
     text-transform: uppercase;
     font-size: 20px;
+    cursor: pointer;
+}
+
+.learn-more::before {
+    content: "";
+    position: absolute;
+    width: 11ch;
+    height: .875rem;
+    border-radius: .5rem;
+    transform: translateY(120%) translateX(-5%);
+    z-index: -1;
+}
+
+.grid-4 .information-card .information-card__content .learn-more:hover::before{
+    opacity: 1;
+}
+
+.grid-1 .information-card .information-card__content .learn-more:hover::before{
+    opacity: 1;
+}
+
+.grid-4 .information-card .information-card__content .learn-more::before {
+    background: red;
+    opacity: 0.1;
+}
+
+.grid-1 .information-card .information-card__content .learn-more::before {
+    background: orange;
+    opacity: 0.4;
 }
 
 .service-card {
@@ -189,6 +218,7 @@ nav > a{
 }
 
 .service-card__content {
+    padding-bottom: 2rem;
     margin-top: 30rem;
     vertical-align: top;
     margin-left: auto;
