@@ -18,20 +18,36 @@
   
 
   <div class="header">
-    <!-- <img class = "full-size-image" src="images/desktop/image-header.jpg" alt="Image of orange"> -->
+
     <div class="top-bar">
       <img class = "logo" src="images/logo.svg" alt="company logo">
       <nav>
-        <a href="#section-about">About</a>
-        <a href="#section-services">Services</a>
-        <a href="#section-projects">Projects</a>
-        <a class="nav__contact" href="#section-contact">Contact</a>
+        <a class = "nav__item" href="#section-about">About</a>
+        <a class = "nav__item" href="#section-services">Services</a>
+        <a class = "nav__item" href="#section-projects">Projects</a>
+        <a class="nav__item nav__contact" href="#section-contact">Contact</a>
       </nav>
+
+      <input id="toggle" type="checkbox">
+        
+      <label class="hamburger" for="toggle">
+        <div class="hamburger-bar"></div>
+        <div class="hamburger-bar"></div>
+        <div class="hamburger-bar"></div>
+      </label>
+
+      <div class="drop-down">
+        <a class = "nav__item" href="#section-about">About</a>
+        <a class = "nav__item" href="#section-services">Services</a>
+        <a class = "nav__item" href="#section-projects">Projects</a>
+        <a class = "nav__item" href="#section-contact">Contact</a>
+      </div>
     </div>
     <div class="header__content">
       <h1>We are creatives</h1>
       <img class="arrow" src="images/icon-arrow-down.svg" alt="">
     </div>
+
   </div>
 
   <div class="grid">

@@ -89,6 +89,58 @@ h3{
     padding: 2rem;
 }
 
+.top-bar > * {
+    z-index: 99;
+}
+
+.top-bar > input {
+    display: none;
+}
+
+.hamburger {
+    border: none;
+    background: none;
+    display: block;
+    min-width: 40px;
+    cursor: pointer;
+}
+
+.hamburger-bar{
+    position: relative;
+    margin: 7px;
+    display: block;
+    height: 2px;
+    background: var(--clr-neutral-white);
+}
+
+.drop-down {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+    position: absolute;
+    justify-content: space-around;
+    padding-bottom: 50vh;
+    z-index: 98;
+    background-color: rgb(0 0 0 / 0.9);    
+    transform: translate(-150%, -2rem);
+    transition: .8s;
+}
+
+.drop-down > a {
+    display: flex;
+    margin: auto;
+}
+
+.drop-down > .nav__item {
+    font-size: 1.5rem;
+}
+
+.top-bar #toggle:checked ~ .drop-down{
+    transform: translate(-2rem, -2rem);
+}
+
 nav {
     padding-right: 3rem;
     display: flex;
@@ -97,7 +149,7 @@ nav {
     align-items: center;
 }
 
-nav > a{
+.nav__item {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: .5rem;
@@ -351,6 +403,14 @@ nav > a{
     width: 10rem;
 }
 
+
+@media (min-width: 850px) {
+    .hamburger {
+        display: none;
+    }
+    
+}
+
 /* interactivity and reactivity */
 @media (max-width: 850px) {
     .grid {
@@ -405,6 +465,10 @@ nav > a{
 
     .testimonial-grid {
         grid-template-columns: 1fr;
+    }
+
+    nav {
+        display: none;
     }
 }
 
